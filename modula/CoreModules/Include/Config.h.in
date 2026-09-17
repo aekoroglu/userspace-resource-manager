@@ -13,6 +13,9 @@
 #define URM_CUSTOM_DIR "@URM_CUSTOM_DIR@/"
 #define URM_RUNSTATE_DIR "@URM_RUNSTATEDIR@/"
 #define URM_SOCKET_PATH URM_RUNSTATE_DIR "restune_sock"
+#define URM_CACHE_DIR           "@URM_CACHE_DIR@/"
+#define URM_CACHE_PRUNED_DIR    URM_CACHE_DIR "pruned"
+#define URM_CACHE_UNFILTERED_DIR URM_CACHE_DIR "unfiltered"
 #define URM_TEST_DATA_DIR "@CMAKE_INSTALL_FULL_DATADIR@/urm/tests/"
 
 #endif

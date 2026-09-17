@@ -28,7 +28,12 @@ set(URM_CUSTOM_DIR "${CMAKE_INSTALL_FULL_SYSCONFDIR}/urm/custom" CACHE PATH
 
 # Directory for runtime/volatile state
 # Override with -DURM_RUNSTATEDIR=<path> at configure time.
-set(URM_RUNSTATEDIR "/run" CACHE PATH "Directory for runtime state files")
+set(URM_RUNSTATEDIR "/run/urm" CACHE PATH "Directory for runtime state files")
+
+# Directory for contextual-classifier cache (pruned/unfiltered)
+# Override with -DURM_CACHE_DIR=<path> at configure time.
+set(URM_CACHE_DIR "/var/cache/urm" CACHE PATH
+    "Directory for classifier feature-pruning cache")
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/configs)
 add_subdirectory(${CMAKE_SOURCE_DIR}/modula)
