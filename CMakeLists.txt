@@ -16,6 +16,20 @@ option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 option(BUILD_CLASSIFIER "Classifier" ON)
 option(BUILD_TESTS "Test Framework, Unit and Integration Tests" OFF)
 
+# Base directory for common/target/classifier data
+# Override with -DURM_DATA_DIR=<path> at configure time.
+set(URM_DATA_DIR "${CMAKE_INSTALL_FULL_SYSCONFDIR}/urm" CACHE PATH
+    "Base directory for common/target/classifier data")
+
+# Directory for host-specific user config overrides.
+# Override with -DURM_CUSTOM_DIR=<path> at configure time.
+set(URM_CUSTOM_DIR "${CMAKE_INSTALL_FULL_SYSCONFDIR}/urm/custom" CACHE PATH
+    "Directory for host-specific user config overrides")
+
+# Directory for runtime/volatile state
+# Override with -DURM_RUNSTATEDIR=<path> at configure time.
+set(URM_RUNSTATEDIR "/run" CACHE PATH "Directory for runtime state files")
+
 add_subdirectory(${CMAKE_SOURCE_DIR}/configs)
 add_subdirectory(${CMAKE_SOURCE_DIR}/modula)
 add_subdirectory(${CMAKE_SOURCE_DIR}/client)
