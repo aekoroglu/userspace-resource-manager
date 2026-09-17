@@ -34,7 +34,7 @@
 #define TEST_CLASS "COMPONENT"
 #define TEST_SUBCAT "CONTEXT_CLASSIFIER"
 #define CLASSIFIER_CONFIGS_DIR URM_CLASSIFIER_DIR
-#define TEST_CONFIG_PATH "/usr/share/urm/tests/configs/ClassificationAppPredConfig.yaml"
+#define TEST_CONFIG_PATH URM_TEST_DATA_DIR "configs/ClassificationAppPredConfig.yaml"
 
 static const std::string FT_MODEL_PATH = CLASSIFIER_CONFIGS_DIR "floret_model_supervised.bin";
 

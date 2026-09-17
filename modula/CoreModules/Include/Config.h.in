@@ -12,5 +12,6 @@
 #define URM_CLASSIFIER_DIR URM_DATA_DIR "classifier/"
 #define URM_CUSTOM_DIR "@URM_CUSTOM_DIR@/"
 #define URM_RUNSTATE_DIR "@URM_RUNSTATEDIR@/"
+#define URM_TEST_DATA_DIR "@CMAKE_INSTALL_FULL_DATADIR@/urm/tests/"
 
 #endif
